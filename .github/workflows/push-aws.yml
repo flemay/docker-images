@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-      paths:
-        - 'docker-aws/**'
+    paths:
+      - 'docker-aws/**'
   # schedule:
   #   - cron: '0 6 2 * *'
 jobs:
