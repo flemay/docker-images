@@ -55,7 +55,6 @@ This image will always be built with the tag `latest` so tools will always be up
 
 A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
 
-
 [link3Musketeers]: https://3musketeers.io
 [link3MusketeersExamples]: https://3musketeers.io/examples/
 
