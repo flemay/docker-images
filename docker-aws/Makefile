@@ -1,5 +1,6 @@
 COMPOSE_BUILD_AWS = docker-compose build --no-cache aws
 COMPOSE_RUN_AWS = docker-compose run --rm aws
+COMPOSE_RUN_MUSKETEERS = docker-compose run --rm musketeers
 ENVFILE ?= env.template
 
 all:
@@ -7,7 +8,7 @@ all:
 
 ciTest: envfile build test clean
 
-ciDeploy: envfile build test deploy clean
+ciPush: envfile build test push clean
 
 envfile:
 	cp -f $(ENVFILE) .env
@@ -24,8 +25,8 @@ test:
 shell:
 	$(COMPOSE_RUN_AWS) bash
 
-deploy:
-	$(COMPOSE_RUN_AWS) ./scripts/deploy.sh
+push:
+	$(COMPOSE_RUN_MUSKETEERS) ./scripts/push.sh
 
 clean:
 	docker-compose down --remove-orphans

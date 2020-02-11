@@ -9,3 +9,15 @@ services:
         source: .
         target: /opt/app
     working_dir: /opt/app
+
+  musketeers:
+    image: flemay/musketeers:latest
+    env_file: .env
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    working_dir: /opt/app
