@@ -76,6 +76,7 @@ This image will always be built with the tag `latest` and tools will always be u
 A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
 
 
+
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
 [linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-aws/workflows/Deploy/badge.svg
