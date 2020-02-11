@@ -3,7 +3,7 @@ COMPOSE_RUN_AWS = docker-compose run --rm aws
 COMPOSE_RUN_MUSKETEERS = docker-compose run --rm musketeers
 ENVFILE ?= env.template
 
-export IMAGE_NAME="flemay/aws:latest"
+export IMAGE_NAME=flemay/aws:latest
 
 all:
 	ENVFILE=env.example $(MAKE) envfile build test clean
