@@ -1,0 +1,32 @@
+version: '3.4'
+services:
+  musketeers:
+    build: .
+    image: flemay/musketeers:latest
+    command: bash
+    env_file: .env
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+    working_dir: /opt/app
+
+  musketeers_docker_sock:
+    image: flemay/musketeers:latest
+    command: bash
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    working_dir: /opt/app
+
+  musketeers_test:
+    image: flemay/musketeers:latest
+    command: bash
+    env_file: .env
+    environment:
+      MESSAGE_2: ${MESSAGE}
+    working_dir: /opt/app
