@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  aws:
+    build: .
+    image: flemay/aws:latest
+    env_file: .env
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+    working_dir: /opt/app

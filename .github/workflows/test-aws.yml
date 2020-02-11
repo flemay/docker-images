@@ -1,0 +1,12 @@
+name: Test AWS
+on:
+  pull_request:
+    paths:
+      - 'docker-aws/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test
+      run: cd docker-aws && make ciTest
