@@ -1,0 +1,19 @@
+name: Push Musketeers
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'docker-musketeers/**'
+  # schedule:
+  #   - cron: '0 6 2 * *'
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Push
+        run: cd docker-musketeers && make ciPush
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
