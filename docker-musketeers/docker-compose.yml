@@ -14,6 +14,7 @@ services:
   musketeers_docker_sock:
     image: flemay/musketeers:latest
     command: bash
+    env_file: .env
     volumes:
       - type: bind
         source: .
