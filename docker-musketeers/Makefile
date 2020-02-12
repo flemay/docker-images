@@ -9,7 +9,7 @@ all:
 
 ciTest: envfile build test clean
 
-ciDeploy: envfile build test deploy clean
+ciPush: envfile build test push clean
 
 envfile:
 	cp -f $(ENVFILE) .env
@@ -29,9 +29,9 @@ shellDockerSock:
 shellTest:
 	$(COMPOSE_RUN_MUSKETEERS_TEST)
 
+push:
+	$(COMPOSE_RUN_MUSKETEERS_DOCKER_SOCK) ./scripts/push.sh
+
 clean:
 	docker-compose down --remove-orphans
 	rm -f .env
-
-deploy:
-	$(COMPOSE_RUN_MUSKETEERS) ./scripts/deploy.sh
