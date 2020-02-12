@@ -5,8 +5,8 @@ on:
       - master
     paths:
       - 'docker-musketeers/**'
-  # schedule:
-  #   - cron: '0 6 2 * *'
+  schedule:
+    - cron: '0 6 1 * *'
 jobs:
   push:
     runs-on: ubuntu-latest
