@@ -7,6 +7,6 @@ RUN apk --no-cache update && apk --no-cache upgrade \
     && apk --no-cache --virtual build-deps add gcc python3-dev openssl-dev libffi-dev musl-dev \
     && pip3 install --upgrade \
       pip \
-      docker-compose==1.24.1 \
+      docker-compose \
     && apk del build-deps
 CMD [ "make" ]
