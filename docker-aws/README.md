@@ -16,6 +16,7 @@ Docker image of the latest and greatest of AWS tools, always.
 - [aws-shell][linkAWSShell]
 - [aws-sam][linkAWSSAM]
 - [cfn-lint][linkCloudFormationLinter]
+- [cfn-flip][linkCloudFormationTemplateFlip]
 
 ## Usage
 
@@ -92,3 +93,4 @@ A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tes
 [linkAWSCLI]: https://github.com/aws/aws-cli
 [linkAWSSAM]: https://github.com/awslabs/serverless-application-model
 [linkCloudFormationLinter]: https://github.com/aws-cloudformation/cfn-python-lint
+[linkCloudFormationTemplateFlip]: https://github.com/awslabs/aws-cfn-template-flip
