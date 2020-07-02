@@ -1,10 +1,10 @@
+# Docker - Hugo
+
 [![Build Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
 [![Docker Build Status][linkDockerHubProjectBuildBadge]][linkDockerHubProjectBuild]
 [![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
-
-# Docker - Hugo
 
 Docker image of the latest version of [Hugo][linkHugo], always!
 
@@ -17,6 +17,19 @@ Docker image of the latest version of [Hugo][linkHugo], always!
 - bash, curl, git
 
 ## Usage
+
+```bash
+# pull image
+$ docker pull flemay/hugo
+# run image
+$ docker run --rm flemay/hugo hugo version
+```
+
+## Example
+
+This image is used when building and deploying the website from the repository [flemay/fredericlemay-com][linkFredericLemayRepo].
+
+## Development
 
 ```bash
 # generate .env file
@@ -41,7 +54,13 @@ This image will always be built with the tag `latest` so tools will always be up
 
 A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
 
+## Contributing
 
+Contributions are greatly appreciated. Everyone can contribute and [here][linkProjectContributing] are different ways.
+
+
+[linkFredericLemayRepo]: https://github.com/flemay/fredericlemay-com
+[linkProjectContributing]: CONTRIBUTING.md
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
 [linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-hugo/workflows/Deploy/badge.svg

@@ -1,10 +1,10 @@
+# Docker - Musketeers
+
 [![Build Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
 [![Docker Build Status][linkDockerProjectBuildBadge]][linkDockerHubProjectBuild]
 [![Docker Hub Badge][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
-
-# Docker - Musketeers
 
 🐳 Lightweight image with essential tools for a [3 Musketeers][link3Musketeers] project. ⚔️
 
@@ -30,9 +30,13 @@ $ docker pull flemay/musketeers
 $ docker run --rm flemay/musketeers docker --version
 ```
 
-```bash
-# Development
+## Example
 
+This image is used when building and deploying the Docker image from the GitLab repository [flemay/cookiecutter][linkGitLabCookiecutter].
+
+## Development
+
+```bash
 # generate .env file
 $ make envfile
 # build image
@@ -43,10 +47,6 @@ $ make test
 $ make shell
 ```
 
-## Example
-
-The GitLab pipeline to build and test the Docker image [flemay/cookiecutter][link3MusketeersExamples] uses `flemay/musketeers` image.
-
 ## Versioning
 
 This image will always be built with the tag `latest` so tools will always be up to date. This may cause issues if any tool has a breaking change.
@@ -55,9 +55,14 @@ This image will always be built with the tag `latest` so tools will always be up
 
 A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
 
+## Contributing
 
+Contributions are greatly appreciated. Everyone can contribute and [here][linkProjectContributing] are different ways.
+
+
+[linkProjectContributing]: CONTRIBUTING.md
 [link3Musketeers]: https://3musketeers.io
-[link3MusketeersExamples]: https://3musketeers.io/examples/
+[linkGitLabCookiecutter]: https://gitlab.com/flemay/docker-cookiecutter
 
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
