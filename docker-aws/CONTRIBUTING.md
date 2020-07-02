@@ -28,7 +28,7 @@ The project follows the typical [GitHub pull request][linkGitHubPR] model. Befor
 
 [linkProjectRepo]: https://github.com/flemay/docker-images
 [linkProjectIssue]: https://github.com/flemay/docker-images/issues
-[linkProjectReadme]: ./README.md#testing
+[linkProjectReadme]: ./README.md#Development
 [linkGitHubFork]: https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 [linkGitHubPR]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests
 [linkGitHubPRFork]: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork
