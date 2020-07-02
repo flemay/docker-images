@@ -1,10 +1,10 @@
+# Docker - AWS
+
 [![Build Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
 [![Docker Build Status][linkDockerHubProjectBuildBadge]][linkDockerHubProjectBuild]
 [![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
-
-# Docker - AWS
 
 Docker image of the latest and greatest of AWS tools, always.
 
@@ -21,9 +21,11 @@ Docker image of the latest and greatest of AWS tools, always.
 ## Usage
 
 ```bash
-# run image from docker hub
-$ docker run --rm flemay/aws
-# run image with env vars (useful when using assume role)
+# Configure aws inside the container only
+$ docker run --rm -it flemay/aws bash
+$> aws configure
+
+# Run image with env vars (useful when using assume role)
 $ docker run --rm -it \
   -e "AWS_ACCESS_KEY_ID" \
   -e "AWS_SECRET_ACCESS_KEY" \
@@ -37,35 +39,33 @@ $ docker run --rm -it \
   -v $(PWD):/opt/app:Z -w /opt/app \
   flemay/aws bash
 
-# build image locally
-# generate .env file
-$ make envfile
-# build image
-$ make build
-# test image
-$ make test
-# go inside the container
-$ make shell
-```
-
-## Examples
-
-### Create a new AWS profile
-
-```bash
+# Create a new AWS profile
 $ docker run --rm -it -v /path/to/.aws:/root/.aws flemay/aws bash
-$ aws configure --profile my-user-profile
+$> aws configure --profile my-user-profile
 AWS Access Key ID [None]: key
 AWS Secret Access Key [None]: secret
 Default region name [None]: ap-southeast-2
 Default output format [None]:
+
+# Query - list all function names that run on NodeJS 6.10
+$> aws lambda list-functions --region ap-southeast-2 --query Functions[?Runtime=="'nodejs6.10'"].FunctionName | sort
 ```
 
-### Query
+## Development
 
 ```bash
-# list all function names that run on NodeJS 6.10
-$ aws lambda list-functions --region ap-southeast-2 --query Functions[?Runtime=="'nodejs6.10'"].FunctionName | sort
+# Build image locally
+# generate .env file
+$ make envfile
+
+# build image
+$ make build
+
+# test image
+$ make test
+
+# go inside the container
+$ make shell
 ```
 
 ## Versioning
@@ -76,8 +76,12 @@ This image will always be built with the tag `latest` and tools will always be u
 
 A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
 
+## Contributing
+
+Contributions are greatly appreciated. Everyone can contribute and [here][linkProjectContributing] are different ways.
 
 
+[linkProjectContributing]: CONTRIBUTING.md
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
 [linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-aws/workflows/Deploy/badge.svg
