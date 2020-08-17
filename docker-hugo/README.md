@@ -56,7 +56,7 @@ A change to master triggers a GitHub Action that builds, tests, and pushes the i
 
 ## Contributing
 
-Contributions are greatly appreciated. Everyone can contribute and [here][linkProjectContributing] are different ways.
+Contributions are greatly appreciated. Everyone can contribute and [here][linkContributing] are different ways.
 
 ## License
 
@@ -64,9 +64,9 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 
 
 [linkFredericLemayRepo]: https://github.com/flemay/fredericlemay-com
-[linkProjectContributing]: CONTRIBUTING.md
+[linkContributing]: https://github.com/flemay/docker-images/blob/master/CONTRIBUTING.md
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
-[linkLicense]: LICENSE
+[linkLicense]: https://github.com/flemay/docker-images/blob/master/LICENSE
 
 [linkGitHubProjectRepositoryBadge]: https://img.shields.io/badge/repository-github-black.svg
 [linkGitHubProjectRepository]: https://github.com/flemay/docker-images/tree/master/docker-hugo
