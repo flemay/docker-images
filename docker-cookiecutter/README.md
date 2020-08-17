@@ -49,7 +49,7 @@ $ make test
 # go inside the container
 $ make shell
 # call docker hub build
-$ make deploy
+$ make push
 # clean
 $ make clean
 ```
