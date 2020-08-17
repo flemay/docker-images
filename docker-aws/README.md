@@ -1,7 +1,6 @@
 # Docker - AWS
 
-[![Build Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
-[![Docker Build Status][linkDockerHubProjectBuildBadge]][linkDockerHubProjectBuild]
+[![Push Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
 [![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
@@ -74,7 +73,7 @@ This image will always be built with the tag `latest` and tools will always be u
 
 ## Automated build process
 
-A change to master triggers a [GitHub Action][linkGitHubActionsProject] that builds, tests, and pushes the image to [Docker Hub][linkDockerHubProject]. The automatic build on Docker Hub has been disabled ensuring the build process to only go through GitHub Actions. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which builds and tests the image.
+A change to master triggers a GitHub Action that builds, tests, and pushes the image to Docker Hub. The automatic build on Docker Hub has been disabled ensuring the build process to only go through GitHub Actions. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which builds and tests the image.
 
 ## Contributing
 
@@ -88,12 +87,12 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 [linkProjectContributing]: CONTRIBUTING.md
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
-[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-aws/workflows/Deploy/badge.svg
-[linkGitHubActionsProject]: https://github.com/flemay/docker-aws/actions
+
+[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-images/workflows/Push-AWS/badge.svg
+[linkGitHubActionsProject]: https://github.com/flemay/docker-images/actions
+
 [linkDockerHubProjectBadge]: https://img.shields.io/badge/repository-dockerhub-blue.svg
 [linkDockerHubProject]: https://hub.docker.com/r/flemay/aws
-[linkDockerHubProjectBuild]: https://hub.docker.com/r/flemay/aws/builds/
-[linkDockerHubProjectBuildBadge]: https://img.shields.io/docker/build/flemay/aws.svg
 [LinkDockerHubProjectPullsBadge]: https://img.shields.io/docker/pulls/flemay/aws
 
 [linkAWSCDK]: https://github.com/awslabs/aws-cdk

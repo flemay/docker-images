@@ -1,8 +1,7 @@
 # Docker - Musketeers
 
-[![Build Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
-[![Docker Build Status][linkDockerProjectBuildBadge]][linkDockerHubProjectBuild]
-[![Docker Hub Badge][linkDockerHubProjectBadge]][linkDockerHubProject]
+[![Push Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
+[![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
 
@@ -32,7 +31,7 @@ $ docker run --rm flemay/musketeers docker --version
 
 ## Example
 
-This image is used when building and deploying the Docker image from the GitLab repository [flemay/cookiecutter][linkGitLabCookiecutter].
+This image is used when pushing the Docker images of this Monorepo.
 
 ## Development
 
@@ -53,7 +52,7 @@ This image will always be built with the tag `latest` so tools will always be up
 
 ## Automated build process
 
-A change to master triggers a [GitHub Action][linkGitHubActionsProject] that builds, tests, and pushes the image to [Docker Hub][linkDockerHubProject]. The automatic build on Docker Hub has been disabled ensuring the build process to only go through GitHub Actions. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which builds and tests the image.
+A change to master triggers a GitHub Action that builds, tests, and pushes the image to Docker Hub. The automatic build on Docker Hub has been disabled ensuring the build process to only go through GitHub Actions. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which builds and tests the image.
 
 ## Contributing
 
@@ -66,14 +65,13 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 
 [linkProjectContributing]: CONTRIBUTING.md
 [link3Musketeers]: https://3musketeers.io
-[linkGitLabCookiecutter]: https://gitlab.com/flemay/docker-cookiecutter
 
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
-[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-musketeers/workflows/Deploy/badge.svg
-[linkGitHubActionsProject]: https://github.com/flemay/docker-musketeers/actions
+
+[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-images/workflows/Push-Musketeers/badge.svg
+[linkGitHubActionsProject]: https://github.com/flemay/docker-images/actions
+
 [linkDockerHubProjectBadge]: https://img.shields.io/badge/repository-dockerhub-blue.svg
 [linkDockerHubProject]: https://hub.docker.com/r/flemay/musketeers
-[linkDockerHubProjectBuild]: https://hub.docker.com/r/flemay/musketeers/builds/
 [LinkDockerHubProjectPullsBadge]: https://img.shields.io/docker/pulls/flemay/musketeers
-[linkDockerProjectBuildBadge]: https://img.shields.io/docker/build/flemay/musketeers.svg
