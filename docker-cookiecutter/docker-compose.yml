@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  myimage:
+    build: .
+    image: ${DOCKER_IMAGE}
+    entrypoint: sh
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+    working_dir: /opt/app
+
+  musketeers:
+    image: flemay/musketeers:latest
+    env_file: .env
+    environment:
+      DOCKER_IMAGE: ${DOCKER_IMAGE}
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    working_dir: /opt/app

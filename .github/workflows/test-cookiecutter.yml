@@ -1,0 +1,12 @@
+name: Test Cookiecutter
+on:
+  pull_request:
+    paths:
+      - 'docker-cookiecutter/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test
+      run: cd docker-cookiecutter && make ciTest

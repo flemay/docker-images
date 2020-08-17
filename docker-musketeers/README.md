@@ -53,11 +53,15 @@ This image will always be built with the tag `latest` so tools will always be up
 
 ## Automated build process
 
-A change to master triggers a [GitHub Action][linkGitHubActionsProject] that tests and triggers [Docker Hub build][linkDockerHubProjectBuild]. The automatic build on Docker Hub has been disabled ensuring the build process to go through GitHub Actions first. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which tests it without deploying.
+A change to master triggers a [GitHub Action][linkGitHubActionsProject] that builds, tests, and pushes the image to [Docker Hub][linkDockerHubProject]. The automatic build on Docker Hub has been disabled ensuring the build process to only go through GitHub Actions. Moreover, to make sure the image is always up to date, a scheduled GitHub Action kicks off every month. Finally, a pull request triggers another GitHub Action which builds and tests the image.
 
 ## Contributing
 
 Contributions are greatly appreciated. Everyone can contribute and [here][linkProjectContributing] are different ways.
+
+## License
+
+[MIT][linkLicense]
 
 
 [linkProjectContributing]: CONTRIBUTING.md
