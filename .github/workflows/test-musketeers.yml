@@ -1,4 +1,4 @@
-name: Test Musketeers
+name: Test-Musketeers
 on:
   pull_request:
     paths:

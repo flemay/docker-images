@@ -1,4 +1,4 @@
-name: Push Cookiecutter
+name: Push-Cookiecutter
 on:
   push:
     branches:

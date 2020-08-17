@@ -74,7 +74,7 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 [linkProjectContributing]: CONTRIBUTING.md
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
-[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-cookiecutter/workflows/Deploy/badge.svg
+[linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-images/workflows/Push+Cookiecutter/badge.svg
 [linkGitHubActionsProject]: https://github.com/flemay/docker-cookiecutter/actions
 [linkDockerHubProjectBadge]: https://img.shields.io/badge/repository-dockerhub-blue.svg
 [linkDockerHubProject]: https://hub.docker.com/r/flemay/cookiecutter

@@ -1,4 +1,4 @@
-name: Push Hugo
+name: Push-Hugo
 on:
   push:
     branches:

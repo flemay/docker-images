@@ -1,4 +1,4 @@
-name: Test Cookiecutter
+name: Test-Cookiecutter
 on:
   pull_request:
     paths:

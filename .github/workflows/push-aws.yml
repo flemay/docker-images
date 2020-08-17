@@ -1,4 +1,4 @@
-name: Push AWS
+name: Push-AWS
 on:
   push:
     branches:
