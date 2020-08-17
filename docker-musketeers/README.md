@@ -1,7 +1,8 @@
 # Docker - Musketeers
 
+[![GitHub Repository][linkGitHubProjectRepositoryBadge]][linkGitHubProjectRepository]
 [![Push Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
-[![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
+[![DockerHub Repository][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
 
@@ -69,6 +70,8 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 [linkLicenseBadge]: https://img.shields.io/dub/l/vibe-d.svg
 [linkLicense]: LICENSE
 
+[linkGitHubProjectRepositoryBadge]: https://img.shields.io/badge/repository-github-black.svg
+[linkGitHubProjectRepository]: https://github.com/flemay/docker-images/tree/master/docker-musketeers
 [linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-images/workflows/Push-Musketeers/badge.svg
 [linkGitHubActionsProject]: https://github.com/flemay/docker-images/actions
 

@@ -1,7 +1,8 @@
 # Docker - Cookiecutter
 
+[![GitHub Repository][linkGitHubProjectRepositoryBadge]][linkGitHubProjectRepository]
 [![Push Status][linkGitHubActionsProjectBadge]][linkGitHubActionsProject]
-[![Generic badge][linkDockerHubProjectBadge]][linkDockerHubProject]
+[![DockerHub Repository][linkDockerHubProjectBadge]][linkDockerHubProject]
 [![Docker Hub Pulls Badge][LinkDockerHubProjectPullsBadge]][linkDockerHubProject]
 [![License][linkLicenseBadge]][linkLicense]
 
@@ -76,6 +77,8 @@ Contributions are greatly appreciated. Everyone can contribute and [here][linkPr
 [linkAlpine]: https://hub.docker.com/_/python/
 [linkGitHubCookiecutter]: https://github.com/cookiecutter/cookiecutter
 
+[linkGitHubProjectRepositoryBadge]: https://img.shields.io/badge/repository-github-black.svg
+[linkGitHubProjectRepository]: https://github.com/flemay/docker-images/tree/master/docker-cookiecutter
 [linkGitHubActionsProjectBadge]: https://github.com/flemay/docker-images/workflows/Push-Cookiecutter/badge.svg
 [linkGitHubActionsProject]: https://github.com/flemay/docker-images/actions
 
