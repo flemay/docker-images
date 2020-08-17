@@ -26,7 +26,7 @@ The project follows the typical [GitHub pull request][linkGitHubPR] model. Befor
 1. Commit and push your changes
 1. Create a [pull request from a fork][linkGitHubPRFork]
 
-## Docker Hub README
+### Docker Hub README
 
 Given the fact that Docker Hub is not connected to this repository, any change to the image's READMEs needs to be replicated on Docker Hub.
 
