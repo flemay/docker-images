@@ -1,8 +1,8 @@
-version: '3.4'
+version: '3.8'
 services:
-  aws:
+  myimage:
     build: .
-    image: flemay/aws:latest
+    image: ${DOCKER_IMAGE}
     env_file: .env
     volumes:
       - type: bind
@@ -13,6 +13,8 @@ services:
   musketeers:
     image: flemay/musketeers:latest
     env_file: .env
+    environment:
+      DOCKER_IMAGE: ${DOCKER_IMAGE}
     volumes:
       - type: bind
         source: .

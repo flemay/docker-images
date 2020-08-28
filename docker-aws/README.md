@@ -11,8 +11,8 @@ Docker image of the latest and greatest of AWS tools, always.
 ## What's inside the image
 
 - Based on NodeJS alpine image
-- [aws-cli][linkAWSCLI]
-- [aws-cdk][linkAWSCDK]
+- [aws-cli][linkAWSCLI] v1.
+    - for version 2, use the official image `amazon/aws-cli:latest`
 - [aws-shell][linkAWSShell]
 - [aws-sam][linkAWSSAM]
 - [cfn-lint][linkCloudFormationLinter]
@@ -27,17 +27,17 @@ $> aws configure
 
 # Run image with env vars (useful when using assume role)
 $ docker run --rm -it \
-  -e "AWS_ACCESS_KEY_ID" \
-  -e "AWS_SECRET_ACCESS_KEY" \
-  -e "AWS_SESSION_TOKEN" \
-  -e "AWS_SECURITY_TOKEN" \
-  -e "ASSUMED_ROLE" \
-  -e "AWS_REGION" \
-  -e "AWS_DEFAULT_REGION" \
-  -e "AWS_PROFILE" \
-  -v ~/.aws:/root/.aws \
-  -v $(PWD):/opt/app:Z -w /opt/app \
-  flemay/aws bash
+    -e "AWS_ACCESS_KEY_ID" \
+    -e "AWS_SECRET_ACCESS_KEY" \
+    -e "AWS_SESSION_TOKEN" \
+    -e "AWS_SECURITY_TOKEN" \
+    -e "ASSUMED_ROLE" \
+    -e "AWS_REGION" \
+    -e "AWS_DEFAULT_REGION" \
+    -e "AWS_PROFILE" \
+    -v ~/.aws:/root/.aws \
+    -v $(PWD):/opt/app:Z -w /opt/app \
+    flemay/aws bash
 
 # Create a new AWS profile
 $ docker run --rm -it -v /path/to/.aws:/root/.aws flemay/aws bash
