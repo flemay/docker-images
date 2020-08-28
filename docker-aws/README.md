@@ -10,7 +10,7 @@ Docker image of the latest and greatest of AWS tools, always.
 
 ## What's inside the image
 
-- Based on NodeJS alpine image
+- Based on alpine image
 - [aws-cli][linkAWSCLI] v1.
     - for version 2, use the official image `amazon/aws-cli:latest`
 - [aws-shell][linkAWSShell]
