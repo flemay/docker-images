@@ -5,6 +5,5 @@ set -u
 aws-shell --help
 aws --version
 sam --version
-python --version
 python3 --version
 cfn-lint --version
