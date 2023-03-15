@@ -27,6 +27,8 @@ $> aws configure
 
 # Run image with env vars (useful when using assume role)
 $ docker run --rm -it \
+    --mount type=bind,source="$(pwd)",target=/opt/app,readonly \
+    --workdir /opt/app \
     -e "AWS_ACCESS_KEY_ID" \
     -e "AWS_SECRET_ACCESS_KEY" \
     -e "AWS_SESSION_TOKEN" \
@@ -35,7 +37,6 @@ $ docker run --rm -it \
     -e "AWS_REGION" \
     -e "AWS_DEFAULT_REGION" \
     -e "AWS_PROFILE" \
-    -v $(PWD):/opt/app:Z -w /opt/app \
     flemay/aws bash
 
 # Create a new AWS profile
