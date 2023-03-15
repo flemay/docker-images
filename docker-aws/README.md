@@ -35,7 +35,6 @@ $ docker run --rm -it \
     -e "AWS_REGION" \
     -e "AWS_DEFAULT_REGION" \
     -e "AWS_PROFILE" \
-    -v ~/.aws:/root/.aws \
     -v $(PWD):/opt/app:Z -w /opt/app \
     flemay/aws bash
 
