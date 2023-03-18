@@ -1,0 +1,10 @@
+services:
+  myimage:
+    build: .
+    image: flemay/aws:local
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+    working_dir: /opt/app
+    entrypoint: bash
