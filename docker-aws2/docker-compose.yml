@@ -8,3 +8,4 @@ services:
         target: /opt/app
     working_dir: /opt/app
     entrypoint: bash
+    env_file: .env

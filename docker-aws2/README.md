@@ -11,7 +11,24 @@ AWS CLI (v2) and some tools.
 * [cfn-lint][link-cfn-lint]
 * [cfn-flip][link-cfn-flip]
 
+## Usage
 
+```bash
+% git clone https://github.com/flemay/docker-images.git
+% cd docker-aws2
+# Build image
+% make build
+# Create .env file with AWS env vars
+% make envfile
+# Assume my-role
+% . awsume my-role
+# Shell into container
+% make shell
+# List s3 buckets
+% aws s3 ls
+# Connect to an EC2 instance with AWS Session Manager
+% aws ssm start-session --target ec2-instance-id
+```
 
 [link-aws-cli-image]: https://gallery.ecr.aws/aws-cli/aws-cli
 [link-aws-cli-v2]: https://github.com/aws/aws-cli/tree/v2

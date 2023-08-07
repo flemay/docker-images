@@ -1,5 +1,9 @@
 COMPOSE_BUILD = docker compose build myimage
 COMPOSE_RUN ?= docker compose run --rm myimage
+ENVFILE ?= env.template
+
+envfile:
+	cp -f $(ENVFILE) .env
 
 build:
 	$(COMPOSE_BUILD)
