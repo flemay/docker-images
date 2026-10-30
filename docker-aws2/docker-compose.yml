@@ -1,11 +1,12 @@
 services:
   myimage:
     build: .
-    image: flemay/aws:local
+    image: aws.local/aws:latest
+    pull_policy: never
     volumes:
       - type: bind
         source: .
-        target: /opt/app
-    working_dir: /opt/app
+        target: /workspace
+    working_dir: /workspace
     entrypoint: bash
     env_file: .env
